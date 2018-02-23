@@ -3,23 +3,69 @@
 header {
     width: 100%;
     display: flex;
+    margin: auto;
+    
+    @media @desktop {
+        width: 93%;
+        margin: auto;
+    }
+    @media @tablet {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    @media @phone {
+        width: 100%;
+        margin: auto;
+        align-items: center;
+    }
 
     nav {
+        @media @desktop {
+            width: 100%;
+        }
+        @media @tablet {
+            width: 93%;
+        }
         ul {
             margin-top: 40px; 
             width: 610px;
             justify-content: space-between;
             display: flex;
+            
+            @media @desktop {
+                width: 100%;
+            }
+            
+            @media @tablet {
+              margin-top: 1%;
+            }
+            @media @phone {
+                margin: auto;
+                flex-direction: column;
+            }
 
             li {
+                @media @phone {
+                    display: flex;
+                    justify-content: center;
+                    margin: 3%;
+                    border-bottom: 1px;
+                    border-bottom-style: solid;
+                    border-bottom-color: grey;
+                }
 
                 a {
                     text-decoration: none;
-                    color: #b0b0b0;
-
+                    color: grey;
+                  
                     &:hover {
                         text-decoration: underline;
                         color: black;
+                        .opacity(.5);
+                    }
+                    @media @phone {
+                        margin-bottom: 1%;
                     }
                 }
             }
@@ -29,5 +75,14 @@ header {
     .logo {
         align-self: flex-end;
         margin: 28px 0 0 91px;
+        
+        @media @tablet {
+            margin: auto;
+        }
+        @media @phone {
+            width: auto;
+            margin: auto;
+        }
     }
+
 }// header

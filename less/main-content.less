@@ -1,29 +1,143 @@
 // Main Content Styles
 
 .main-content {
+    display: flex;
    border-top: 2px solid black; 
    border-bottom: 2px solid black;
    margin: 75px 0 35px 0;
    padding: 35px 0;
    font-size: 16px;
    line-height: 18px;
+    
+    @media @desktop {
+        display: flex;
+        flex-direction: column;
+        width: 93%;
+        margin: auto;
+    }
+        
+    @media @tablet {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        width: 93%;
+    }
+    @media @phone {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
 
    .top-content {
         display: flex;
         justify-content: space-around;
-    }
+        
+        @media @tablet {
+            margin: auto;
+        }
+        @media @phone {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        .text-content {
+
+            button {
+                .button-mixin(green);
+                }
+            }
+                p {
+                padding-right: 2%;
+
+                @media @phone {
+                    margin: 4%;
+                }
+            }
+
+            @media @phone {
+                display: block;
+                justify-content: center;
+                align-content: center;
+                align-self: center;
+                margin: 4%;
+                }
+                 h4{
+                    @media @phone {
+                        text-align: center;
+                        font-size: 2rem;
+                    }
+            }
+        }
 
     .middle-img {
         display: block;
         margin: 30px auto;
+        
+            @media @desktop {
+                    width: 100%;
+            }
+                
+            @media @tablet {
+                width: 100%;
+            }
+            @media @phone {
+                align-items: stretch;
+                width: 100%;
+                margin: 0%;
+            }   
     }
+    
 
     .bottom-content {
         display: flex;
-        justify-content: space-around;
-
-        p {
-            padding-right: 20px;
+        
+        @media @tablet {
+            margin: auto;
         }
-    }
+        @media @phone {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        .text-content {
+
+            button {
+                display: flex;
+                .button-mixin(green);
+                }
+            }
+                p {
+                padding-right: 2%;
+
+                @media @phone {
+                    margin: 4%;
+                }
+            }
+
+            @media @phone {
+                display: block;
+                justify-content: center;
+                align-content: center;
+                align-self: center;
+                margin: 4%;
+                }
+                 h4{
+                    @media @phone {
+                        text-align: center;
+                        font-size: 2rem;
+                    }
+            }
+        }
 }// main-content

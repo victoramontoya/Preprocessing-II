@@ -4,6 +4,33 @@
     display: flex;
     margin-top: 72px;
     justify-content: flex-end;
+    
+    @media @desktop {
+        width: 93%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 2%;
+        
+    }
+    
+    @media @tablet {
+        margin-top: 2%;
+        display: flex;
+        flex-direction:row;
+        margin: auto;
+        width: 90%;
+        justify-content: center;
+       
+    }
+    
+    @media @phone {
+        display: flex;
+        margin: 0%;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .cta-text {
         font-size: 72px;
@@ -14,9 +41,35 @@
         flex-flow: column;
         align-items: center;
         margin: 0 82px 0 0;
+        
+        @media @desktop {
+            width: 100%;
+            margin: auto;
+        }
+        
+        @media @tablet {
+            display: flex;
+            flex-direction:column;
+            align-self: center;
+            margin: 3%;
+            width: 40%;
+            margin-left: auto;
+        }
+        @media @phone {
+            margin: 0%;
+            width: 50%;
+        }
+    }
+    
+    .cta-text h1{
+        @media @tablet {
+            font-size: 5.3rem;
+            }
     }
 
     .cta-text button {
+        .border-radius(20px);
+        .opacity(.5);
         border: 1px double black;
         font-size: 16px;
         background: white;
@@ -24,10 +77,44 @@
         height: 32px;
         margin-top: 10px;
         cursor: pointer;
+        
+        @media @desktop {
+            margin: auto;
+            width: auto;
+            }
+        
+        @media @tablet {
+            font-size: 1.4888888rem;
+            width: 50%;
+            height: 10%;
+            }
+        @media @phone {
+            font-size: 1rem;
+            width: 60%;
+            height: 10%;
+            }
 
         &:hover {
-            background: black;
+            background: green;
             color: white;
+            .skew(160deg, 0deg);
+            .box-shadow(12px 12px 12px black);
+        }
+    }
+    img{
+        @media @desktop {
+        width: 70%;
+        margin: auto;
+        }
+        @media @tablet {
+            width: 40%;
+            margin-left: auto;
+        }
+        @media @phone {
+            width: 80%;
+            margin: 0%;
+            margin-top: 3%;
+            margin-bottom: 3%;
         }
     }
 }// cta

@@ -13,9 +13,27 @@ h1, h2, h3, h4, h5 {
     font-family: 'Bangers', cursive;
     letter-spacing: 1px;
     margin-bottom: 10px;
+
 }
 
 .container {
     width: 880px;
     margin: auto;
+    
+    @media @desktop {
+        display: flex;
+        flex-direction: column;
+        max-width: 880px;
+    }
+    
+    @media @tablet {
+        display: flex;
+        flex-direction: column;
+        max-width: 768px;
+        justify-content: center;
+        min-width: 400px;
+    }
+    @media @phone {
+        max-width: 400px;
+    }
 }
